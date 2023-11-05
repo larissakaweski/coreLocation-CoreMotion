@@ -124,15 +124,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         
         if CMPedometer.isStepCountingAvailable() {
-            
-            guard let startDate = Calendar.current.date(byAdding: .day, value: -7, to: Date()) else { return }
-            
-//            pedoMeter.queryPedometerData(from: startDate, to: Date()) { (data, error) in
-//                guard let data = data, error == nil else { return }
-//                print("Number of Steps: \(data.numberOfSteps)")
-//                self.pedometer.text = "Step Counter: \(data.numberOfSteps)"
-//            }
-            
             pedoMeter.startUpdates(from: Date()) { (data, error) in
                 if error == nil {
                     if let response = data {
