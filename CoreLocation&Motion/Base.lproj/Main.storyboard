@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreLocation_Motion" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unknown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iuM-zv-zmK">
+                                <rect key="frame" x="111.66666666666669" y="412" width="170" height="53"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Accelerometer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dB0-lZ-qfQ">
+                                <rect key="frame" x="73" y="744" width="247" height="35"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pedometer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QFD-kl-N5i">
+                                <rect key="frame" x="73" y="690" width="247" height="35"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dB0-lZ-qfQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="09E-iS-EYy"/>
+                            <constraint firstItem="iuM-zv-zmK" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="0Dp-6u-dY9"/>
+                            <constraint firstItem="dB0-lZ-qfQ" firstAttribute="top" secondItem="iuM-zv-zmK" secondAttribute="bottom" constant="279" id="0L4-TK-rw0"/>
+                            <constraint firstItem="iuM-zv-zmK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Krk-Ix-V0i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dB0-lZ-qfQ" secondAttribute="bottom" constant="39" id="OEX-vd-Lh0"/>
+                            <constraint firstItem="QFD-kl-N5i" firstAttribute="top" secondItem="iuM-zv-zmK" secondAttribute="bottom" constant="225" id="PWi-5d-w9k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dB0-lZ-qfQ" secondAttribute="trailing" constant="73" id="ZEY-Ke-7Iz"/>
+                            <constraint firstItem="QFD-kl-N5i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="73" id="gLr-GB-fCA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QFD-kl-N5i" secondAttribute="trailing" constant="73" id="oxn-Os-VSk"/>
+                            <constraint firstItem="dB0-lZ-qfQ" firstAttribute="top" secondItem="QFD-kl-N5i" secondAttribute="bottom" constant="19" id="pTb-SS-e9f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="accelerometer" destination="dB0-lZ-qfQ" id="sgN-CX-PSO"/>
+                        <outlet property="distanceReading" destination="iuM-zv-zmK" id="cG8-Kj-2Sp"/>
+                        <outlet property="pedometer" destination="QFD-kl-N5i" id="uTe-av-5Q2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-112.21374045801527" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
